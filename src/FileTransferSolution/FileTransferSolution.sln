@@ -22,6 +22,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FileTransferUnitTest", "tes
 		{E14968F9-233F-4B1B-B036-74EBDE250A8A} = {E14968F9-233F-4B1B-B036-74EBDE250A8A}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ParseFile", "data\ParseFile\ParseFile.vcxproj", "{0D3B5083-5A3F-467E-8547-0A2B7D8A0A91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -78,6 +80,14 @@ Global
 		{8655EA7B-92AB-43C8-9812-26DC0F0D0EAC}.Release|x64.Build.0 = Release|x64
 		{8655EA7B-92AB-43C8-9812-26DC0F0D0EAC}.Release|x86.ActiveCfg = Release|Win32
 		{8655EA7B-92AB-43C8-9812-26DC0F0D0EAC}.Release|x86.Build.0 = Release|Win32
+		{0D3B5083-5A3F-467E-8547-0A2B7D8A0A91}.Debug|x64.ActiveCfg = Debug|x64
+		{0D3B5083-5A3F-467E-8547-0A2B7D8A0A91}.Debug|x64.Build.0 = Debug|x64
+		{0D3B5083-5A3F-467E-8547-0A2B7D8A0A91}.Debug|x86.ActiveCfg = Debug|Win32
+		{0D3B5083-5A3F-467E-8547-0A2B7D8A0A91}.Debug|x86.Build.0 = Debug|Win32
+		{0D3B5083-5A3F-467E-8547-0A2B7D8A0A91}.Release|x64.ActiveCfg = Release|x64
+		{0D3B5083-5A3F-467E-8547-0A2B7D8A0A91}.Release|x64.Build.0 = Release|x64
+		{0D3B5083-5A3F-467E-8547-0A2B7D8A0A91}.Release|x86.ActiveCfg = Release|Win32
+		{0D3B5083-5A3F-467E-8547-0A2B7D8A0A91}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,7 +8,14 @@ namespace Domain {
 
 			class IParseFile {
 
+			public:
 
+				enum class Type
+				{
+					INPUT,
+					OUTPUT,
+					ERROR,
+				};
 
 			};
 
