@@ -17,23 +17,5 @@ int main() {
 
 	cout << "Started" << endl;
 
-	cout << "Enter dir: ";
-
-	std::string targetDir;
-
-	cin >> targetDir;
-
-	auto temp = FileSystem::getDirInfo(targetDir);
-
-	cout << "---------------------" << endl;
-
-	printVector(temp.directories);
-
-	cout << "---------------------" << endl;
-
-	printVector(temp.files);
-
-	cout << "---------------------" << endl;
-
 	return 0;
 }
