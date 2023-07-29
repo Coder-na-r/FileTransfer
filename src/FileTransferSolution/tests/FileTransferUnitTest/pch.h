@@ -9,4 +9,9 @@
 
 // Добавьте сюда заголовочные файлы для предварительной компиляции
 
+#include <stdint.h>
+
+#include <vector>
+#include <string>
+
 #endif //PCH_H

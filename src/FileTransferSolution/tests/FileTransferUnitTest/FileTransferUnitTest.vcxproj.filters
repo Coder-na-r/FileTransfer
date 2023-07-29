@@ -15,10 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FileTransferUnitTest.cpp">
+    <ClCompile Include="FileSystemUnitTest.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="ParseFileUnitTest.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

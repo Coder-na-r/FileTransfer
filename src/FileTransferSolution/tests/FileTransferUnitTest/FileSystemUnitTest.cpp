@@ -8,10 +8,10 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace FileTransferUnitTest
 {
-	TEST_CLASS(FileSystem)
+	TEST_CLASS(FileSystemTest)
 	{
 	public:
-	
+
 		TEST_METHOD(TestGetDirInfo_NowDirectory)
 		{
 			DirInfo dirInfo = Data::FS::FileSystem::getDirInfo("..\\..\\tests\\FileTransferUnitTest\\forTestFileSystem\\");
@@ -22,7 +22,7 @@ namespace FileTransferUnitTest
 			Assert::IsTrue(dirInfo.files[0] == vector{ "dir/1.txt" } [0] ,
 				L"dir/1.txt not match");
 
-			Assert::IsTrue(dirInfo.directories[0] == vector{"dir/"}[0] ,
+			Assert::IsTrue(dirInfo.directories[0] == vector{ "dir/" } [0] ,
 				L"Dirs not match");
 		}
 	};

@@ -19,7 +19,7 @@ namespace Data {
 
 			bool isOpen() const;
 
-			bool eof();
+			bool eof() const;
 
 			uint64_t getSize() const;
 
@@ -29,12 +29,14 @@ namespace Data {
 
 			uint64_t getPos() const;
 
-			void setPos(const uint64_t position);
+			bool setPos(const uint64_t position);
 
 			~ParseFile();
 
 		private:
 			ParseFile() = delete;
+
+			uint64_t calcSize__();
 
 			/* fields */
 
