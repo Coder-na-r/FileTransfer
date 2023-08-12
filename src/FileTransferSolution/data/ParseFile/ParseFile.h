@@ -34,6 +34,7 @@ namespace Data {
 			~ParseFile();
 
 		private:
+
 			ParseFile() = delete;
 
 			uint64_t calcSize__();

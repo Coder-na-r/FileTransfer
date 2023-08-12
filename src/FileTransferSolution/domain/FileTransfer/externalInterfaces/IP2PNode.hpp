@@ -6,18 +6,14 @@ namespace Domain {
 
 		namespace externalInterfaces {
 
-			class IP2PNetworkUnit {
+			class IP2PNode {
 
 			public:
 
-				//virtual void getConnections() = 0;
-
-
+				//virtual void send() = 0;
 
 			};
-
 		}
 
 	}
-
 }

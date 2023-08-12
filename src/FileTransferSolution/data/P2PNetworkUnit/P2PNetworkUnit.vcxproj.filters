@@ -13,30 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="externalInterfaces">
-      <UniqueIdentifier>{27cebe6e-e020-4197-a719-62154be9d24a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Entity">
-      <UniqueIdentifier>{34a1f41b-3278-44ec-b9e5-00f61f3b3532}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="externalInterfaces\IFileSystem.hpp">
-      <Filter>externalInterfaces</Filter>
-    </ClCompile>
-    <ClCompile Include="externalInterfaces\IParseFile.hpp">
-      <Filter>externalInterfaces</Filter>
-    </ClCompile>
-    <ClCompile Include="externalInterfaces\IP2PNode.hpp">
-      <Filter>externalInterfaces</Filter>
-    </ClCompile>
+    <ClInclude Include="P2PNetworkUnit.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Acceptor.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="P2PNode.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="externalInterfaces\IConnection.hpp">
-      <Filter>externalInterfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="Entity\DirInfo.hpp">
-      <Filter>Entity</Filter>
-    </ClInclude>
+    <ClCompile Include="P2PNetworkUnit.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="Acceptor.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="P2PNode.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
