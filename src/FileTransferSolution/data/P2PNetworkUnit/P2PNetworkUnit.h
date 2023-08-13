@@ -1,5 +1,8 @@
 #pragma once
 
+#include "externalInterfaces/INetworkConnection.hpp"
+#include "entity/ConnectionInfo.hpp"
+
 #include "Acceptor.h"
 
 #include "boost\asio.hpp"
@@ -12,23 +15,25 @@ namespace Data {
 
     namespace P2P {
 
-        class P2PNetworkUnit {
+        class P2PNetworkUnit : public Domain::FT::externalInterfaces::INetworkConnection {
 
         public:
 
-            P2PNetworkUnit(std::function<void(bool, std::shared_ptr<asio::ip::tcp::socket>)> onConnected);
+            P2PNetworkUnit(std::function<void(Domain::FT::Entity::ConnectionInfo)> onConnected);
 
-            void start(unsigned int thread_pool_size = 1);
+            virtual void setOnConnectedCallback(std::function<void(Domain::FT::Entity::ConnectionInfo)> onConnected) override;
 
-            void startListen(const unsigned short port_num);
+            virtual void start(unsigned int thread_pool_size = 1) override;
 
-            void connectTo(std::string ip, const unsigned short port);
+            virtual void startListen(const unsigned short port_num) override;
 
-            void stopListen();
+            virtual void connectTo(std::string ip, const unsigned short port) override;
 
-            void stop();
+            virtual void stopListen() override;
 
-            size_t getCountConnections();
+            virtual void stop() override;
+
+            virtual size_t getCountConnections() override;
 
         private:
 
@@ -37,7 +42,7 @@ namespace Data {
             std::unique_ptr<Acceptor> acceptor;
             std::vector<std::unique_ptr<std::thread>> threadPool;
 
-            std::function<void(bool, std::shared_ptr<asio::ip::tcp::socket>)> onConnectedCallback;
+            std::function<void(Domain::FT::Entity::ConnectionInfo)> onConnectedCallback;
 
             std::vector<P2PNode> connections;   //  тут нужен интферфейс для threadsafe структуры + DI
         };

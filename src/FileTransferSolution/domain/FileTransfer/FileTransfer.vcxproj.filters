@@ -30,12 +30,27 @@
     <ClCompile Include="externalInterfaces\IP2PNode.hpp">
       <Filter>externalInterfaces</Filter>
     </ClCompile>
+    <ClCompile Include="FileTransfer.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkConnectionManager.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="externalInterfaces\IConnection.hpp">
+    <ClInclude Include="externalInterfaces\INetworkConnection.hpp">
       <Filter>externalInterfaces</Filter>
     </ClInclude>
     <ClInclude Include="Entity\DirInfo.hpp">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="FileTransfer.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkConnectionManager.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\ConnectionInfo.hpp">
       <Filter>Entity</Filter>
     </ClInclude>
   </ItemGroup>

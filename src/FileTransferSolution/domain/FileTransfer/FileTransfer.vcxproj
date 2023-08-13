@@ -22,10 +22,15 @@
     <ClCompile Include="externalInterfaces\IFileSystem.hpp" />
     <ClCompile Include="externalInterfaces\IP2PNode.hpp" />
     <ClCompile Include="externalInterfaces\IParseFile.hpp" />
+    <ClCompile Include="FileTransfer.cpp" />
+    <ClCompile Include="NetworkConnectionManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Entity\ConnectionInfo.hpp" />
     <ClInclude Include="Entity\DirInfo.hpp" />
-    <ClInclude Include="externalInterfaces\IConnection.hpp" />
+    <ClInclude Include="externalInterfaces\INetworkConnection.hpp" />
+    <ClInclude Include="FileTransfer.h" />
+    <ClInclude Include="NetworkConnectionManager.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

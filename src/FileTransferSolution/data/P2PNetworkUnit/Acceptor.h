@@ -1,5 +1,7 @@
 #pragma once
 
+#include "entity/ConnectionInfo.hpp"
+
 #include "P2PNode.h"
 
 #include "boost\asio.hpp"
@@ -17,7 +19,7 @@ namespace Data {
 
         public:
 
-            Acceptor(asio::io_service& ios, unsigned short port_num, std::vector<P2PNode>& connections, std::function<void(bool, std::shared_ptr<asio::ip::tcp::socket>)> onConnected);
+            Acceptor(asio::io_service& ios, unsigned short port_num, std::vector<P2PNode>& connections, std::function<void(Domain::FT::Entity::ConnectionInfo)> onConnected);
 
             void Start();
 
@@ -34,7 +36,7 @@ namespace Data {
             asio::ip::tcp::acceptor acceptor;
             std::atomic<bool> isStopped;
 
-            std::function<void(bool, std::shared_ptr<asio::ip::tcp::socket>)> onConnectedCallback;
+            std::function<void(Domain::FT::Entity::ConnectionInfo)> onConnectedCallback;
 
             std::vector<P2PNode>* connections;
         };

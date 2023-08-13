@@ -4,8 +4,7 @@ namespace Data {
 
 	namespace P2P {
 
-
-        Acceptor::Acceptor(asio::io_service& ios, unsigned short port_num, std::vector<P2PNode>& connections, std::function<void(bool, std::shared_ptr<asio::ip::tcp::socket>)> onConnected)
+        Acceptor::Acceptor(asio::io_service& ios, unsigned short port_num, std::vector<P2PNode>& connections, std::function<void(Domain::FT::Entity::ConnectionInfo)> onConnected)
             : ioService(ios),
             acceptor(ioService,
                 asio::ip::tcp::endpoint(
@@ -41,7 +40,7 @@ namespace Data {
 
         void Acceptor::onAccept(const boost::system::error_code& ec, std::shared_ptr<asio::ip::tcp::socket> sock)
         {
-            onConnectedCallback(ec.value() == 0 ? true : false, sock);
+            onConnectedCallback({ ec.value() == 0, sock->remote_endpoint().address().to_string(), sock->remote_endpoint().port() });
 
             if (ec.value() == 0) {
                 connections->push_back({ sock });

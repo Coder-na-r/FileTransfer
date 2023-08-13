@@ -4,10 +4,14 @@ namespace Data {
 
 	namespace P2P {
 
-        P2PNetworkUnit::P2PNetworkUnit(std::function<void(bool, std::shared_ptr<asio::ip::tcp::socket>)> onConnected)
+        P2PNetworkUnit::P2PNetworkUnit(std::function<void(Domain::FT::Entity::ConnectionInfo)> onConnected)
             : onConnectedCallback(onConnected)
         {
             ioWork.reset(new asio::io_service::work(ioService));
+        }
+
+        void P2PNetworkUnit::setOnConnectedCallback(std::function<void(Domain::FT::Entity::ConnectionInfo)> onConnected) {
+            onConnected = onConnected;
         }
 
         void P2PNetworkUnit::start(unsigned int thread_pool_size) {
@@ -38,7 +42,7 @@ namespace Data {
             std::shared_ptr<asio::ip::tcp::socket> sock(new asio::ip::tcp::socket(ioService));
 
             sock->async_connect({ asio::ip::address_v4::from_string(ip), port }, [this, sock](const boost::system::error_code& error) {
-                onConnectedCallback(error.value() == 0 ? true : false, sock);
+                onConnectedCallback({ error.value() == 0, sock->remote_endpoint().address().to_string(), sock->remote_endpoint().port() });
                 });
         }
 
