@@ -29,6 +29,8 @@ namespace Domain {
 
 				virtual size_t getCountConnections() = 0;
 
+				//virtual ~INetworkConnection() = 0;
+
 			};
 
 		}

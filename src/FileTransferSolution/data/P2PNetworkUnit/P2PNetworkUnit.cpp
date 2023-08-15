@@ -42,7 +42,16 @@ namespace Data {
             std::shared_ptr<asio::ip::tcp::socket> sock(new asio::ip::tcp::socket(ioService));
 
             sock->async_connect({ asio::ip::address_v4::from_string(ip), port }, [this, sock](const boost::system::error_code& error) {
+
                 onConnectedCallback({ error.value() == 0, sock->remote_endpoint().address().to_string(), sock->remote_endpoint().port() });
+
+                if (error.value() == 0) {
+                    connections.push_back({ sock });
+                }
+                else {
+                    std::cout << "Error! Error code = " << error.value() << ". Message: " << error.message();
+                }
+
                 });
         }
 

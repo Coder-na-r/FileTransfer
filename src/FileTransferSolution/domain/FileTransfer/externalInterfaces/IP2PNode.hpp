@@ -12,6 +12,8 @@ namespace Domain {
 
 				//virtual void send() = 0;
 
+				//virtual ~IP2PNode() = 0;
+
 			};
 		}
 

@@ -8,7 +8,9 @@ namespace Domain {
 
 			class IFileSystem {
 
+			public:
 
+				//virtual ~IFileSystem() = 0;
 
 			};
 

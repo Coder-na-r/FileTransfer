@@ -17,6 +17,8 @@ namespace Domain {
 					ERROR,
 				};
 
+				//virtual ~IParseFile() = 0;
+
 			};
 
 		}

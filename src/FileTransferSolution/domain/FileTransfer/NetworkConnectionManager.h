@@ -35,7 +35,7 @@ namespace Domain {
 
 		private:
 
-			INetworkConnection* networkConnection;
+			std::unique_ptr<INetworkConnection> networkConnection;
 
 		};
 

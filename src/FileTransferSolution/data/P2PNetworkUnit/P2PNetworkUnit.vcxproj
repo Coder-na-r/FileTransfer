@@ -148,6 +148,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Acceptor.h" />
+    <ClInclude Include="externalInterfaces\IHashCalc.hpp" />
+    <ClInclude Include="HashCRC.hpp" />
     <ClInclude Include="P2PNetworkUnit.h" />
     <ClInclude Include="P2PNode.h" />
   </ItemGroup>

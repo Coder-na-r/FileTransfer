@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="externalInterfaces">
+      <UniqueIdentifier>{791436d9-fd12-49a2-8f98-57ce58d7b154}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="P2PNetworkUnit.h">
@@ -23,6 +26,12 @@
     </ClInclude>
     <ClInclude Include="P2PNode.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="HashCRC.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="externalInterfaces\IHashCalc.hpp">
+      <Filter>externalInterfaces</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
