@@ -6,6 +6,7 @@
 #include "boost\asio.hpp"
 
 #include <memory>
+#include <optional>
 
 #define BUFFER_SIZE 1024
 #define HEADER_SIZE sizeof(MSG_INFO)
@@ -24,14 +25,11 @@ namespace Data {
 
             bool send(const char* data, const uint64_t size, uint8_t maxAttempts = 2);
 
-            uint64_t recv(char* data);
+            std::optional<uint64_t> recv(char* data, const uint64_t sizeBuffer);
 
         private:
             
             std::shared_ptr<asio::ip::tcp::socket> sock;
-
-            std::unique_ptr<char[]> bufferIn;
-            uint64_t length;
 
             std::unique_ptr<Data::externalInterfaces::IHashCalc> hasher;
 
@@ -67,6 +65,8 @@ namespace Data {
             void send__(const char* data, const uint64_t size);
 
             void recv__(MSG_INFO& msgInfo);
+
+            void recv__(char* data, const uint64_t sizeWaiting);
 
         };
 
